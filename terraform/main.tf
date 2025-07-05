@@ -12,7 +12,7 @@ resource "aws_ecr_repository" "mysql" {
 
 resource "aws_key_pair" "assignment_key" {
   key_name   = "assignment2-key"
-  public_key = file("/home/ec2-user/environment/clo835_assignment2/terraform/assignment2-key.pub")
+  public_key = file("${path.module}/assignment2-key.pub")
 }
 
 
